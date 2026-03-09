@@ -1,0 +1,136 @@
+Even Number Filter
+
+Write a function:
+
+get_even_numbers(numbers)
+
+Requirements:
+
+Accept a list of numbers
+
+Return only even numbers
+
+Handle:
+
+empty list
+
+non-integer values
+
+Must include error handling
+
+Example:
+
+Input: [1,2,3,4,5,6]
+
+
+def get_even_numbers(numbers):
+
+    if not isinstance(numbers, list):
+        raise TypeError("Input must be a list")
+
+    even_numbers = []
+
+    for num in numbers:
+
+        if not isinstance(num, int):
+            continue
+
+        if num % 2 == 0:
+            even_numbers.append(num)
+
+    return even_numbers
+	
+print(get_even_numbers([1,2,3,4,5,6]))
+
+This Python function filters even integers from a list while ignoring invalid items.	
+	
+1. Function Definition
+def get_even_numbers(numbers):
+
+Defines a function named get_even_numbers.
+
+It takes one parameter: numbers, which is expected to be a list.
+
+2. Input Type Check
+if not isinstance(numbers, list):
+    raise TypeError("Input must be a list")
+
+isinstance(numbers, list) checks if the input is a list.
+
+If the input is not a list, the function raises a TypeError.
+
+Example:
+
+get_even_numbers("123")
+
+Result:
+
+TypeError: Input must be a list
+3. Create Empty List
+even_numbers = []
+
+Initializes an empty list to store the even numbers found in the input list.
+
+4. Loop Through the List
+for num in numbers:
+
+Iterates through each element in the numbers list.
+
+Each element is temporarily stored in the variable num.
+
+5. Skip Non-Integers
+if not isinstance(num, int):
+    continue
+
+Checks if the current item is an integer.
+
+If it is not an integer, continue skips that item and moves to the next iteration.
+
+Example list:
+
+[2, 4, "6", 8.0, 10]
+
+"6" and 8.0 are skipped because they are not integers.
+
+6. Check if Number is Even
+if num % 2 == 0:
+
+% is the modulus operator.
+
+num % 2 == 0 means the number is divisible by 2 with no remainder → even number.
+
+7. Add Even Number to List
+even_numbers.append(num)
+
+If the number is even, it is added to the even_numbers list.
+
+8. Return Result
+return even_numbers
+
+Returns the list containing all even integers found.
+
+✅ Example Usage
+
+nums = [1, 2, 3, 4, 5, 6, "8", 10.5]
+print(get_even_numbers(nums))
+
+Output:
+
+[2, 4, 6]
+
+Explanation:
+
+"8" and 10.5 are ignored (not integers).
+
+Only even integers are returned.
+
+💡 Key Features of This Function
+
+Validates input type.
+
+Ignores invalid list elements.
+
+Filters only even integers.
+
+Prevents runtime errors from bad input.	
+	
