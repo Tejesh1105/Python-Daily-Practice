@@ -1,0 +1,49 @@
+This is a DevOps-style beginner task.
+
+Write a Python script that:
+
+Reads a log file
+
+Counts how many times "ERROR" appears
+
+Prints:
+
+Total Errors: X
+
+Edge cases:
+
+File does not exist
+
+File is empty
+
+Large log file
+
+Example log:
+
+INFO Server started
+ERROR Database connection failed
+INFO Retry attempt
+ERROR Timeout
+
+Output:
+
+Total Errors: 2
+
+Solution:- 
+def count_errors(filename):
+
+    try:
+        error_count = 0
+
+        with open(filename, "r") as file:
+            for line in file:
+                if "ERROR" in line.upper():
+                    error_count += 1
+
+        print(f"Total Errors: {error_count}")
+
+    except FileNotFoundError:
+        print("Error: Log file not found")
+
+    except PermissionError:
+        print("Error: Permission denied")
