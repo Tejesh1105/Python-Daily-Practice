@@ -1,0 +1,17 @@
+What happens internally when Python executes this code?
+
+a = 10
+b = a
+a = 20
+
+What will b contain and why?
+
+Explain with reference to memory and object references.
+
+
+When a = 10 Python creates an integer object 10 in the memory. 
+Variable is a references to that object 10 in the memory. 
+When b = a Python does not copy the value. b is assigned the same reference as a. 
+When a = 20 Python creates a new integer object 20. a now references to the newly created object 20.
+b however still references to 10. Therefore the value of b is 10. 
+In short python variables store references to object, not the values themselves.
