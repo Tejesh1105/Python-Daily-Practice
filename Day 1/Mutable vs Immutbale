@@ -1,0 +1,70 @@
+Mutable vs Immutable
+
+Mutable Objects
+Mutbale objects are the objects whose state can change after creation.
+
+Example:-
+lst = [1,2,3]
+lst.append(4)
+print(lst)
+Output:- [1,2,3,4]
+
+Immutbale objects
+Immutable objects are the objects whose state/value cannot be changed/modified afer creation.
+
+Example:- 
+int
+float
+str
+tuple
+frozenset
+bool
+
+Example:-
+x = 10
+x = x + 1
+
+Here, x will point to 10
+However now, x will refrence to new object 11.
+Python does not modify 10.
+
+Memory behavior
+
+Example:-
+
+a = [1,2]
+b = a
+a.append(3)
+
+print(a)
+output:- [1,2,3]
+Here, both variables points to same object.
+i.e a = [1,2,3]
+b = [1,2,3]
+
+But with immutbale:
+a = 10
+b = a
+a = 20
+print(a)
+print(b)
+
+Output:- 
+a = 20
+b = 10
+
+Why immutbale objects matter
+Benefits:- 
+Safer
+hasable
+Can be used as keys in dictionary
+threat-safe
+
+Example:- 
+my_datab = {
+   (1,2): "Value"
+}
+Here, Tuple works as keys because tuple is immutbale.
+ 
+
+
