@@ -1,0 +1,52 @@
+Word Frequency Counter
+Write a function:
+word_counter(text)
+
+Requirements:
+Count frequency of each word
+Ignore case
+Remove punctuation
+Return a dictionary
+Example:
+Input:
+"Python is great. Python is powerful"
+
+Output:
+{
+ "python":2,
+ "is":2,
+ "great":1,
+ "powerful":1
+}
+
+Solution:-
+import string   # This module helps us work with punctuation like ! , . ?
+
+def word_counter(text):
+    
+    # Step 1: Convert all letters to lowercase
+    # This makes "Hello" and "hello" count as the same word
+    text = text.lower()
+
+    # Step 2: Create a translation table that removes punctuation
+    # string.punctuation contains characters like ! " # $ % & ' ( ) * + , - . /
+    translator = str.maketrans("", "", string.punctuation)
+
+    # Step 3: Remove punctuation from the text
+    text = text.translate(translator)
+
+    # Step 4: Split the text into a list of words
+    words = text.split()
+
+    # Step 5: Create an empty dictionary to store word counts
+    word_count = {}
+
+    # Step 6: Go through each word in the list
+    for word in words:
+        
+        # If the word already exists in the dictionary, increase its count
+        # If not, start its count at 0 and add 1
+        word_count[word] = word_count.get(word, 0) + 1
+
+    # Step 7: Return the dictionary with word frequencies
+    return word_count
