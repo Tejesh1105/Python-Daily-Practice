@@ -1,0 +1,84 @@
+Explain the difference between:
+List
+Tuple
+Set
+Dictionary
+When would you use each?
+
+List
+Properties:-
+They are ordered
+mutbale
+allows duplicate
+
+Example:- 
+my_list = [1,2,3]
+
+Used when:- 
+You need ordered data
+Values may change.
+
+Example:- 
+user tasks
+logs 
+queue.
+
+
+Tuple:-
+Properties:- 
+Ordered
+immutubale
+allows duplicate
+
+Example:- 
+new_tup = (1,2,3)
+
+Used when :-
+data must not change 
+used for fixed structure.
+
+Example:- 
+coordinates
+config constants.
+
+Sets:-
+Properties:- 
+ordered
+mutable
+does not allow duplicate
+
+Example:- 
+my_set = {1,2,3}
+
+Used when:- 
+we need to remove duplicate value 
+Memership checking.
+
+Example:-
+unique user id's
+visited urls
+
+Dictionary
+Properties:-
+
+Key:value pairs
+Keys must be immutbale
+ordered(Python 3.7+)
+
+Example:-
+
+new_matrix = {
+    "User_name" : "Linux-Admin", 
+	(Login_pass): "Value"
+}
+
+Used when:-
+Mapping data
+Lookup operations
+
+Example:-
+user data
+configurations
+API response.
+
+
